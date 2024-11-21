@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    background-image: url('background.jpg'); /* Replace with your image URL */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+   
+  }
+
+  .hero-content {
+    max-width: 50%; 
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-custom {
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7A8727 !important;
+  }
+  .nav-item{
+      padding: 7px;
+      font-weight: 1.3 rem;
+      font-weight: bold;
+  }
+
+#about{
+  display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    background-image: url('about.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+ 
+}
+#story h2{
+ text-align: center;
+ font-size: 5rem;
+  color:#7A8727 !important; 
+  font-weight: bold;
+  padding:6px;
+  margin:2px;
+  font-family: 'DM Serif Display', serif;
+}
+#about .content {
+    flex: 1;
+    padding-left: 20px; 
+    text-align: left; 
+    font-family: 'DM Sans', sans-serif;
+    margin-left: 4px;
+    padding-left: 4px;
+  }
+
+  #about h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    
+  }
+
+  #about p {
+    font-size: 1.6rem;
+    line-height: 2;
+    max-width: 700px; 
+    font-family: 'DM Sans', sans-serif;
+    margin-left: 50px;
+  }
+  #about b{
+      color:#e80a0a;
+  }
+
+#menuheading{
+ text-align: center;
+ font-size: 5rem;
+  color:#7A8727 !important; 
+  font-weight: bold;
+  padding:6px;
+  margin:2px;
+  font-family: 'DM Serif Display', serif;
+}
+#menu{
+    
+    align-items: center;
+   
+    background-image: url('Food\ Presentation\ \(2\).jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+  #menu .menu-item {
+    text-align: center;
+  }
+  
+  #menu img {
+    width: 200px;  
+    height: 200px; 
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  #menu p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fcf9f9;
+    font-weight: bold;
+  }
+
+
+  #chef,#contact{
+    text-align: center;
+ font-size: 5rem;
+  color:#7A8727 !important; 
+  font-weight: bold;
+  padding:6px;
+  margin:2px;
+  font-family: 'DM Serif Display', serif;
+  }
+
+  #masterchef{
+    align-items: center;
+   
+    background-image: url('Food\ Presentation\ \(3\).jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+  }
+
+  #contactus{
+    align-items: center;
+   
+    background-image: url('contact.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    padding: 20px;
+    margin-top: 5px;
+  }
+
+  
+  .social-media-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .social-icon {
+    font-size: 40px;  /* Size of the social icons */
+    color: #31cde8;      /* Color of the icons */
+    transition: transform 0.3s ease;
+    padding:7px;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+    color: #d4d11f;   /* Hover color change */
+   
+  margin-top: 20px;
+  }
+  #contactus p{
+    margin-top: 140px; 
+    font-size: 2rem;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  #contactus h2{
+    font-size: 2rem;
+    margin-top: 140px; 
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  h3 {
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 1024px) {
+    .menu-title {
+        font-size: 2.5rem; 
+    }
+    .menu-item h3 {
+        font-size: 1.3rem; 
+    }
+    .menu-item .price {
+        font-size: 1.1rem; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-title {
+        font-size: 2rem; 
+    }
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    }
+    .menu-item {
+        padding: 10px; 
+    }
+    .menu-item h3 {
+        font-size: 1.2rem; 
+    }
+    .menu-item .price {
+        font-size: 1rem; 
+    }
+    .menu-item .add-button {
+        padding: 6px 12px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-title {
+        font-size: 1.5rem; 
+    }
+    .menu-grid {
+        grid-template-columns: 1fr; 
+    }
+    .menu-item h3 {
+        font-size: 1rem; 
+    }
+    .menu-item .price {
+        font-size: 0.9rem; 
+    }
+    .menu-item .add-button {
+        padding: 5px 10px; 
+    }
+}

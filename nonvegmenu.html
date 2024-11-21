@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Veg Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-image: url('nonveg.png'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .menu-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            
+           
+        }
+        .menu-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .menu-title span {
+            color: #ff5722; 
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+           
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px #FFD508;
+            background-color: rgba(16, 15, 15, 0.6);
+        }
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: #ff5722; /* Orange for dish names */
+            margin-bottom: 5px;
+        }
+        .menu-item p {
+            font-size: 1rem;
+            margin: 0 0 10px 0;
+        }
+        .menu-item .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff5722;
+        }
+        .menu-item .add-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 8px 15px;
+            background-color: #ff5722;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item .add-button:hover {
+            background-color: #ff7849;
+        }
+        #back {
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-title">
+            NON-VEG MENU - <span>FLAVORFUL DELIGHTS</span>
+            <br>
+          <a href="index.html #menuheading"><button id="back">Back</button></a>  
+        </div>
+        <div class="menu-grid">
+            <!-- Non-Veg Dishes -->
+            <div class="menu-item">
+                <h3>Chicken Butter Masala</h3>
+                <p>A creamy, rich curry made with tender chicken pieces</p>
+                <div class="price">₹349</div>
+                <button class="add-button" onclick="addToCart('Chicken Butter Masala', 349)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mutton Biryani</h3>
+                <p>Flavorful rice cooked with spiced mutton</p>
+                <div class="price">₹420</div>
+                <button class="add-button" onclick="addToCart('Mutton Biryani', 420)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Grilled Fish</h3>
+                <p>Marinated fish grilled to perfection</p>
+                <div class="price">₹399</div>
+                <button class="add-button" onclick="addToCart('Grilled Fish', 399)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Egg Curry</h3>
+                <p>Boiled eggs in a spiced tomato-based curry</p>
+                <div class="price">₹199</div>
+                <button class="add-button" onclick="addToCart('Egg Curry', 199)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Prawn Masala</h3>
+                <p>Succulent prawns cooked in rich spices</p>
+                <div class="price">₹450</div>
+                <button class="add-button" onclick="addToCart('Prawn Masala', 450)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Tandoori</h3>
+                <p>Juicy chicken roasted in a tandoor</p>
+                <div class="price">₹320</div>
+                <button class="add-button" onclick="addToCart('Chicken Tandoori', 320)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mutton Rogan Josh</h3>
+                <p>Slow-cooked mutton curry with rich flavors</p>
+                <div class="price">₹490</div>
+                <button class="add-button" onclick="addToCart('Mutton Rogan Josh', 490)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Fish Fry</h3>
+                <p>Crispy fried fish with aromatic spices</p>
+                <div class="price">₹310</div>
+                <button class="add-button" onclick="addToCart('Fish Fry', 310)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Fish Masala</h3>
+                <p>Crispy fried fish with aromatic spices</p>
+                <div class="price">₹390</div>
+                <button class="add-button" onclick="addToCart('Fish masala', 310)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken 65</h3>
+                <p>Crispy fried chicken with aromatic spices</p>
+                <div class="price">₹399</div>
+                <button class="add-button" onclick="addToCart('chicken 65', 399)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mutton Kasa</h3>
+                <p>Crispy fried fish with aromatic spices</p>
+                <div class="price">₹699</div>
+                <button class="add-button" onclick="addToCart('mutoon kasa', 699)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Chicekn chilly</h3>
+                <p>Crispy fried fish with aromatic spices</p>
+                <div class="price">₹399</div>
+                <button class="add-button" onclick="addToCart('chicekn chilly', 399)">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(dishName, price) {
+            alert(`${dishName} (₹${price}) added to cart!`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-image: url('veg.png'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .menu-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .menu-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .menu-title span {
+            color: #ffcc00; /* Yellow color for highlight */
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: #ffcc00;
+            margin-bottom: 5px;
+        }
+        .menu-item p {
+            font-size: 1rem;
+            margin: 0 0 10px 0;
+        }
+        .menu-item .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+        .menu-item .add-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 8px 15px;
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item .add-button:hover {
+            background-color: #ffaa00;
+        }
+        #back {
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-title">
+            VEG MENU - <span>BITE INTO HAPPINESS</span>
+            <br>
+          <a href="index.html #menuheading"><button id="back">Back</button></a>  
+        </div>
+        <div class="menu-grid">
+            <!-- Menu Items -->
+            <div class="menu-item">
+                <h3>Paneer Butter Masala</h3>
+                <p>A creamy, rich curry made with paneer</p>
+                <div class="price">₹299</div>
+                <button class="add-button" onclick="addToCart('Paneer Butter Masala', 299)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Vegetable Biryani</h3>
+                <p>A flavorful and aromatic rice dish</p>
+                <div class="price">₹260</div>
+                <button class="add-button" onclick="addToCart('Vegetable Biryani', 260)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Falafel</h3>
+                <p>Deep-fried balls made from ground chickpeas</p>
+                <div class="price">₹230</div>
+                <button class="add-button" onclick="addToCart('Falafel', 230)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mushroom Risotto</h3>
+                <p>A creamy rice dish made with mushrooms</p>
+                <div class="price">₹320</div>
+                <button class="add-button" onclick="addToCart('Mushroom Risotto', 320)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Salad</h3>
+                <p>Fresh vegetable salad</p>
+                <div class="price">₹100</div>
+                <button class="add-button" onclick="addToCart('Salad', 100)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Basmati Pulau</h3>
+                <p>Fragrant rice cooked with spices</p>
+                <div class="price">₹350</div>
+                <button class="add-button" onclick="addToCart('Basmati Pulau', 350)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Naan</h3>
+                <p>Soft Indian flatbread</p>
+                <div class="price">₹190</div>
+                <button class="add-button" onclick="addToCart('Naan', 190)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Zeera Rice</h3>
+                <p>Aromatic cumin-flavored rice</p>
+                <div class="price">₹130</div>
+                <button class="add-button" onclick="addToCart('Zeera Rice', 130)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Vegetable Stir Fry</h3>
+                <p>Quick and healthy stir-fried vegetables</p>
+                <div class="price">₹200</div>
+                <button class="add-button" onclick="addToCart('Vegetable Stir Fry', 200)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Aloo Gobi</h3>
+                <p>Potato and cauliflower curry</p>
+                <div class="price">₹150</div>
+                <button class="add-button" onclick="addToCart('Aloo Gobi', 150)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Chana Masala</h3>
+                <p>Spiced chickpea curry</p>
+                <div class="price">₹200</div>
+                <button class="add-button" onclick="addToCart('Chana Masala', 200)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Palak Paneer</h3>
+                <p>Paneer in spinach gravy</p>
+                <div class="price">₹299</div>
+                <button class="add-button" onclick="addToCart('Palak Paneer', 299)">Add</button>
+            </div>     
+        </div>
+    </div>
+
+    <script>
+        function addToCart(dishName, price) {
+            alert(`${dishName} (₹${price}) added to cart!`);
+        }
+    </script>
+</body>
+</html>

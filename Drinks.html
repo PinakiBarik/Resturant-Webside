@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-image: url('drink.png'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .menu-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+           
+        }
+        .menu-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .menu-title span {
+            color: #ffcc00; /* Yellow color for highlight */
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+          
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: #ffcc00;
+            margin-bottom: 5px;
+        }
+        .menu-item p {
+            font-size: 1rem;
+            margin: 0 0 10px 0;
+        }
+        .menu-item .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+        .menu-item .add-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 8px 15px;
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item .add-button:hover {
+            background-color: #ffaa00;
+        }
+        #back {
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-title">
+            DRINKS MENU - <span>REFRESH YOURSELF</span><br>
+            <a href="index.html #menuheading"><button id="back">Back</button></a>  
+        </div>
+        <div class="menu-grid">
+            <!-- Drinks Items -->
+            <div class="menu-item">
+                <h3>Fresh Lime Soda</h3>
+                <p>A tangy and refreshing soda drink</p>
+                <div class="price">₹99</div>
+                <button class="add-button" onclick="addToCart('Fresh Lime Soda', 99)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mango Smoothie</h3>
+                <p>Rich and creamy mango delight</p>
+                <div class="price">₹150</div>
+                <button class="add-button" onclick="addToCart('Mango Smoothie', 150)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Cold Coffee</h3>
+                <p>Perfectly brewed coffee served chilled</p>
+                <div class="price">₹120</div>
+                <button class="add-button" onclick="addToCart('Cold Coffee', 120)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mocktail</h3>
+                <p>A fruity blend of exotic flavors</p>
+                <div class="price">₹180</div>
+                <button class="add-button" onclick="addToCart('Mocktail', 180)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Strawberry Shake</h3>
+                <p>Fresh strawberries blended into a creamy shake</p>
+                <div class="price">₹160</div>
+                <button class="add-button" onclick="addToCart('Strawberry Shake', 160)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Virgin Mojito</h3>
+                <p>Refreshing mint and lime cooler</p>
+                <div class="price">₹130</div>
+                <button class="add-button" onclick="addToCart('Virgin Mojito', 130)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Banana Drink</h3>
+                <p>Healthy banana juice</p>
+                <div class="price">₹80</div>
+                <button class="add-button" onclick="addToCart('banana drink', 80)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Hot Chocolate</h3>
+                <p>Rich and creamy chocolate drink</p>
+                <div class="price">₹140</div>
+                <button class="add-button" onclick="addToCart('Hot Chocolate', 140)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Watermelon Juice</h3>
+                <p>Freshly squeezed watermelon drink</p>
+                <div class="price">₹110</div>
+                <button class="add-button" onclick="addToCart('Watermelon Juice', 110)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Espresso</h3>
+                <p>Strong, dark, and bold coffee</p>
+                <div class="price">₹90</div>
+                <button class="add-button" onclick="addToCart('Espresso', 90)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Coconout water</h3>
+                <p>Soft fresh coconout water</p>
+                <div class="price">₹100</div>
+                <button class="add-button" onclick="addToCart('Coconout water', 90)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Apple shake</h3>
+                <p>Soft fresh apple shake</p>
+                <div class="price">₹100</div>
+                <button class="add-button" onclick="addToCart('Apple shake', 90)">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(drinkName, price) {
+            alert(`${drinkName} (₹${price}) added to cart!`);
+        }
+    </script>
+</body>
+</html>

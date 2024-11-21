@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #fcf8f8;
+            margin: 0;
+            padding: 0;
+            background-image: url('icecream.png'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .menu-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .menu-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff69b4;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .menu-title span {
+            color: #fffefd; /* Orange color for highlight */
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .menu-item h3 {
+            font-size: 1.5rem;
+            color: #f9f8f8;
+            margin-bottom: 5px;
+        }
+        .menu-item p {
+            font-size: 1rem;
+            margin: 0 0 10px 0;
+        }
+        .menu-item .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+        .menu-item .add-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 8px 15px;
+            background-color: #ff69b4;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-item .add-button:hover {
+            background-color: #ff1493;
+        }
+        #back {
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-title">
+            ICE CREAM MENU - <span>SWEET TREATS</span>
+          <br>  <a href="index.html #menuheading"><button id="back">Back</button></a>
+        </div>
+        <div class="menu-grid">
+            <!-- Menu Items -->
+            <div class="menu-item">
+                <h3>Vanilla Bliss</h3>
+                <p>Classic vanilla ice cream, rich and creamy</p>
+                <div class="price">₹120</div>
+                <button class="add-button" onclick="addToCart('Vanilla Bliss', 120)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Chocolate Fudge</h3>
+                <p>Decadent chocolate ice cream with fudge swirls</p>
+                <div class="price">₹150</div>
+                <button class="add-button" onclick="addToCart('Chocolate Fudge', 150)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Strawberry Delight</h3>
+                <p>Sweet strawberry ice cream with real fruit chunks</p>
+                <div class="price">₹140</div>
+                <button class="add-button" onclick="addToCart('Strawberry Delight', 140)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mint Choco Chip</h3>
+                <p>Refreshing mint ice cream with chocolate chips</p>
+                <div class="price">₹160</div>
+                <button class="add-button" onclick="addToCart('Mint Choco Chip', 160)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Cookie Crunch</h3>
+                <p>Creamy ice cream with crunchy cookie pieces</p>
+                <div class="price">₹180</div>
+                <button class="add-button" onclick="addToCart('Cookie Crunch', 180)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Mango Mania</h3>
+                <p>Fresh mango ice cream with tropical flavors</p>
+                <div class="price">₹130</div>
+                <button class="add-button" onclick="addToCart('Mango Mania', 130)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Butterscotch Bliss</h3>
+                <p>Crunchy butterscotch and caramel swirls</p>
+                <div class="price">₹150</div>
+                <button class="add-button" onclick="addToCart('Butterscotch Bliss', 150)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Caramel Crunch</h3>
+                <p>Sweet caramel ice cream with a crunchy twist</p>
+                <div class="price">₹170</div>
+                <button class="add-button" onclick="addToCart('Caramel Crunch', 170)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Black Forest</h3>
+                <p>Rich chocolate with cherry and fudge flavors</p>
+                <div class="price">₹200</div>
+                <button class="add-button" onclick="addToCart('Black Forest', 200)">Add</button>
+            </div>
+            <div class="menu-item">
+                <h3>Pistachio Paradise</h3>
+                <p>Delicious pistachio ice cream with a nutty twist</p>
+                <div class="price">₹190</div>
+                <button class="add-button" onclick="addToCart('Pistachio Paradise', 190)">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(itemName, price) {
+            alert(`${itemName} (₹${price}) added to cart!`);
+        }
+    </script>
+</body>
+</html>
